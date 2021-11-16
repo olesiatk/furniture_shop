@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "react-app",
+    "prettier"
+  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "no-console": "warn",
+    "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
+    "import/order": "off",
+    "react/prop-types": [2, { "ignore": ["children"] }],
+    "react/jsx-props-no-spreading": "off",
+    "react/no-unused-prop-types": "warn",
+    "no-debugger": "warn",
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": ["label"],
+        "labelAttributes": ["htmlFor"],
+        "controlComponents": ["input"]
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      { "props": true, "ignorePropertyModificationsFor": ["draft"] }
+    ]
+  }
+}
